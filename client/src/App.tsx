@@ -64,6 +64,8 @@ const App: React.FC = () => {
         onSubmit={(e) => {
           e.preventDefault();
           setLocations([...locations, { lat: lat, long: long }]);
+          setLat("");
+          setLong("");
         }}
       >
         <label htmlFor="lat">Latitud</label>
