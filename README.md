@@ -26,4 +26,6 @@ Additional features:
 // To run the compiled project
 
 yarn build && yarn start
+
+// Browse http://localhost:3100
 ```
