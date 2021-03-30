@@ -4,11 +4,10 @@ import path from "path";
 
 const app = express();
 
-console.log(path.resolve(__dirname, "../client/build/"));
-
 app.use(express.static(path.resolve(__dirname, "../client/build/")));
 
 const ApiRouter = express.Router();
+
 ApiRouter.get("/weather", (req, res) => {
   const { lat, long } = req.query;
 
@@ -34,7 +33,7 @@ ApiRouter.get("/weather", (req, res) => {
     })
     .catch((e) => {
       console.error(e);
-      res.status(500).json(null);
+      return res.status(500).json(null);
     });
 });
 
